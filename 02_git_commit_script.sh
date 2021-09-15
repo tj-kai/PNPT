@@ -9,7 +9,7 @@ then
 else
 	if [ "$2" == "" ] 
 	then
-		tmp_commit_msg="Commiting file $1 "
+		tmp_commit_msg="Commiting file $1"
 	else
 		tmp_commit_msg=$2
 	fi
@@ -18,8 +18,8 @@ else
 	git add $1
 	
 	echo ""
-	echo "Executing - git commit -m \" $tmp_commit_msg \" "
-	git commit -m \" $tmp_commit_msg \" 
+	echo "Executing - git commit -m \"$tmp_commit_msg \""
+	git commit -m \""$tmp_commit_msg\"" 
 	
 	echo ""
 	echo "Executing - git push origin main"
